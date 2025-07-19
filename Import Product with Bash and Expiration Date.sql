@@ -1,14 +1,14 @@
 use DbDISUCII
 
 SELECT 
-DETOPE.PROCOD, 
-DETOPE.ASOCOD, 
-DETOPE.DETMED, 
-DETOPE.DETDSC, 
+DETOPE.PROCOD as CodigoProducto, 
+DETOPE.ASOCOD as Company, 
+DETOPE.DETMED as Medida, 
+DETOPE.DETDSC as Descripcion, 
 CONVERT(varchar, DETOPE.DETFVE, 121) as FechaVencimiento,
-DETOPE.DETLOT, 
-MAEASO.ASOCOD, 
-maeaso.ASONRZ,
+DETOPE.DETLOT as Lote, 
+MAEASO.ASOCOD as CodigoLaboratorio, 
+maeaso.ASONRZ as Laboratorio,
 count(DETOPE.detcod) as Cant,
 vintxp.TXTSTK as Stock,
 sum(DETOPE.DETSTK) as SumStock
