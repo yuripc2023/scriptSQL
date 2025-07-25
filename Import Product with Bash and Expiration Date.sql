@@ -7,8 +7,6 @@ DETOPE.DETMED as Medida,
 DETOPE.DETDSC as Descripcion, 
 CONVERT(varchar, DETOPE.DETFVE, 121) as FechaVencimiento,
 DETOPE.DETLOT as Lote, 
-MAEASO.ASOCOD as CodigoLaboratorio, 
-maeaso.ASONRZ as Laboratorio,
 count(DETOPE.detcod) as Cant,
 vintxp.TXTSTK as Stock,
 sum(DETOPE.DETSTK) as SumStock
@@ -27,7 +25,5 @@ DETOPE.DETDSC,
 DETOPE.DETPREC,  
 CONVERT(varchar, DETOPE.DETFVE, 121),
 DETOPE.DETLOT, 
-MAEASO.ASOCOD, 
-maeaso.ASONRZ,
 vintxp.TXTSTK
-ORDER BY MAEASO.ASONRZ, DETOPE.DETDSC
+ORDER BY DETOPE.PROCOD
